@@ -48,7 +48,7 @@ def main():
         logger.info("Starting acme client...")
         acme_client = AcmeClient(acme_config_home)
         acme_client.enable_auto_upgrade()
-        acme_client.enable_cronjob()
+        # acme_client.enable_cronjob()
         acme_client.register(config.accountemail, config.server)
         acme_client.issue(config.domains, config.keylength, config.server, config.dns, dns_env_vars)
         acme_client.install(config.domains, config.keylength, config.key_path, config.fullchain_path)
